@@ -1,0 +1,47 @@
+{
+  "_doc": "Paramètres d'extraction du réseau praticable depuis le plan GeoTIFF. Coordonnées des zones en pixels de l'image source (x = colonne, y = ligne). Vérifier le résultat dans preview_catacombes.png après chaque modification.",
+  "source": "C:/app_workspace/Cata_path/Nexus alkhemia 2011_geo.tiff",
+  "output": "../../app/src/main/assets/maps/catacombes.iaumap",
+  "preview": "preview_catacombes.png",
+  "name": "Catacombes de Paris (Nexus / Alkhemia 2011)",
+  "tiles_output": "../../app/src/main/assets",
+  "tiles_name": "catacombes_plan",
+  "tiles_min_zoom": 14,
+  "tiles_max_zoom": 18,
+  "tiles_quality": 72,
+
+  "neutral_max_saturation": 14,
+  "wall_min_grey": 110,
+  "wall_max_grey": 215,
+  "text_max_grey": 110,
+  "text_dilation_px": 7,
+  "fill_min_grey": 236,
+  "fill_max_grey": 250,
+  "fill_open_px": 5,
+  "corridor_close_px": 3,
+  "corridor_open_px": 2,
+  "wall_band_radius_px": 2,
+  "min_component_px": 400,
+  "margin_px": 40,
+
+  "exclude_rects": [
+    {"label": "Titre", "x0": 0, "y0": 0, "x1": 4400, "y1": 250},
+    {"label": "Encart Le Bunker (agrandissement)", "x0": 0, "y0": 250, "x1": 1150, "y1": 2250},
+    {"label": "Encart La Salle Z (agrandissement)", "x0": 1500, "y0": 250, "x1": 2480, "y1": 1420},
+    {"label": "Encart Marie Rose (agrandissement)", "x0": 2580, "y0": 330, "x1": 3800, "y1": 1010},
+    {"label": "Échelle", "x0": 1450, "y0": 2360, "x1": 1900, "y1": 2720},
+    {"label": "Encart Place Falguière", "x0": 780, "y0": 3150, "x1": 1300, "y1": 3520},
+    {"label": "Plan de l'église du Val de Grâce (surface)", "x0": 850, "y0": 3700, "x1": 1850, "y1": 4650},
+    {"label": "Encarts Le Cellier et La Plage", "x0": 0, "y0": 5280, "x1": 2100, "y1": 6307},
+    {"label": "Cartouche bas", "x0": 2700, "y0": 6000, "x1": 3700, "y1": 6307},
+    {"label": "Texte haut droite", "x0": 5850, "y0": 60, "x1": 6307, "y1": 1400},
+    {"label": "Avertissement", "x0": 5800, "y0": 2180, "x1": 6307, "y1": 3153},
+    {"label": "Coupe et logo", "x0": 5850, "y0": 3153, "x1": 6307, "y1": 4250},
+    {"label": "Encart Salle des Huîtres (agrandissement)", "x0": 5400, "y0": 4200, "x1": 6307, "y1": 5000},
+    {"label": "Arrêté et légende", "x0": 5450, "y0": 5000, "x1": 6307, "y1": 6307}
+  ],
+  "exclude_circles": [
+    {"label": "Rose des vents", "x": 1660, "y": 2190, "r": 300},
+    {"label": "Rose schématique du Carrefour des morts", "x": 3440, "y": 4040, "r": 280}
+  ]
+}
