@@ -78,7 +78,7 @@ $$
 $$
 \mathbf b = \bar{\mathbf m} + \mathbf c,\qquad
 R = \frac{r_x + r_y + r_z}{3},\qquad
-S = \operatorname{diag}\!\left(\frac{R}{r_x}, \frac{R}{r_y}, \frac{R}{r_z}\right)
+S = \mathrm{diag}\!\left(\frac{R}{r_x}, \frac{R}{r_y}, \frac{R}{r_z}\right)
 $$
 
 Résidu de qualité :
@@ -98,8 +98,8 @@ $$
 $$
 
 $$
-\psi_{mag} = D - \operatorname{atan2}(m_{h,y},\, m_{h,x}), \qquad
-I_{mes} = \operatorname{atan2}\!\left(m_{h,z},\, \sqrt{m_{h,x}^2 + m_{h,y}^2}\right)
+\psi_{mag} = D - \mathrm{atan2}(m_{h,y},\, m_{h,x}), \qquad
+I_{mes} = \mathrm{atan2}\!\left(m_{h,z},\, \sqrt{m_{h,x}^2 + m_{h,y}^2}\right)
 $$
 
 Le résultat est un **cap vrai** : la déclinaison $D$ (WMM) est ajoutée.

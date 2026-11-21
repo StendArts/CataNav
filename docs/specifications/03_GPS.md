@@ -69,7 +69,7 @@ $$
 
 $$
 \mathbf z_{GPS} = \mathbf p_n + \mathbf v, \qquad
-R = \operatorname{diag}(\sigma_H^2, \sigma_H^2, \sigma_V^2)
+R = \mathrm{diag}(\sigma_H^2, \sigma_H^2, \sigma_V^2)
 $$
 
 ## 4. Interfaces

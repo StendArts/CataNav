@@ -33,7 +33,7 @@ Sans droits *root*, le seul moyen de fournir une position système est le mécan
 $$
 (\varphi, \lambda, h) = \text{LTP}^{-1}(\hat{\mathbf p}_n), \qquad
 v = \sqrt{\hat v_N^2 + \hat v_E^2}, \qquad
-\chi = \operatorname{atan2}(\hat v_E, \hat v_N) \bmod 360°
+\chi = \mathrm{atan2}(\hat v_E, \hat v_N) \bmod 360°
 $$
 
 | Champ `Location` | Valeur |
@@ -42,7 +42,7 @@ $$
 | `verticalAccuracyMeters` | $\max(\sigma_D, 1\ \text{m})$ |
 | `speed`, `speedAccuracyMetersPerSecond` | $v$, $\max\big(\sqrt{\sigma_{vN}^2 + \sigma_{vE}^2},\ 0{,}1\big)$ |
 | `bearing` | $\chi$ |
-| `bearingAccuracyDegrees` | $\operatorname{clamp}\big(\tfrac{180}{\pi}\,\sigma_v / v,\ 1°,\ 180°\big)$ si $v > 0{,}3$ m/s, sinon 180° (cap inconnu) |
+| `bearingAccuracyDegrees` | $\mathrm{clamp}\big(\tfrac{180}{\pi}\,\sigma_v / v,\ 1°,\ 180°\big)$ si $v > 0{,}3$ m/s, sinon 180° (cap inconnu) |
 | `time`, `elapsedRealtimeNanos` | instant de publication |
 
 ### 2.4 États

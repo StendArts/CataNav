@@ -57,7 +57,7 @@ $$
 $$
 \mathbf z_{PDR} = \begin{pmatrix} v\cos\psi \\ v\sin\psi \\ 0 \end{pmatrix} = \mathbf v_n + \mathbf w,
 \qquad
-R = \operatorname{diag}(\sigma_H^2, \sigma_H^2, \sigma_V^2)
+R = \mathrm{diag}(\sigma_H^2, \sigma_H^2, \sigma_V^2)
 $$
 
 $$

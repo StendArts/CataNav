@@ -140,9 +140,9 @@ L'attitude est le quaternion de Hamilton $q_{nb}$, qui fait passer du repère po
 
 $$
 C_{nb} = R_z(\psi)\,R_y(\theta)\,R_x(\phi), \qquad
-\phi = \operatorname{atan2}(C_{32}, C_{33}),\;
+\phi = \mathrm{atan2}(C_{32}, C_{33}),\;
 \theta = -\arcsin(C_{31}),\;
-\psi = \operatorname{atan2}(C_{21}, C_{11})
+\psi = \mathrm{atan2}(C_{21}, C_{11})
 $$
 
 ### 5.3 Temps

@@ -34,11 +34,11 @@ Algorithme (pixels neutres : $\max(R,G,B) - \min(R,G,B) \le 14$, $v = \max(R,G,B
 
 $$
 \begin{aligned}
-T &= \operatorname{dilate}\big(\{v < 110\},\, 7\big) &&\text{texte}\\
+T &= \mathrm{dilate}\big(\{v < 110\},\, 7\big) &&\text{texte}\\
 W &= \{110 \le v < 215\} \setminus T &&\text{parois}\\
-F &= \operatorname{ouvre}\big(\{236 \le v \le 250\},\, 5\big) &&\text{intérieurs gris clair}\\
-C &= \operatorname{ouvre}\big(\operatorname{ferme}(W, r=3),\, r=2\big) &&\text{galeries à double paroi}\\
-P &= \operatorname{dilate}\big(C \cup (W \cap \operatorname{dilate}(F)),\, r=2\big) \cup F &&\text{praticable}
+F &= \mathrm{ouvre}\big(\{236 \le v \le 250\},\, 5\big) &&\text{intérieurs gris clair}\\
+C &= \mathrm{ouvre}\big(\mathrm{ferme}(W, r=3),\, r=2\big) &&\text{galeries à double paroi}\\
+P &= \mathrm{dilate}\big(C \cup (W \cap \mathrm{dilate}(F)),\, r=2\big) \cup F &&\text{praticable}
 \end{aligned}
 $$
 
@@ -102,7 +102,7 @@ $$
 ### 3.3 Recalage dans KAL (moteur, 1 Hz)
 
 $$
-R_{rech} = \operatorname{clamp}\big(3\,\sigma_H,\ 5\ \text{m},\ 40\ \text{m}\big), \qquad
+R_{rech} = \mathrm{clamp}\big(3\,\sigma_H,\ 5\ \text{m},\ 40\ \text{m}\big), \qquad
 \sigma_H = \sqrt{P_{NN} + P_{EE}}
 $$
 

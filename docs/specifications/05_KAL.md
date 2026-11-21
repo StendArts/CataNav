@@ -47,8 +47,8 @@ $$
 Pendant `Imu.ALIGNMENT_SAMPLES` (100) échantillons, soit environ 1 s **immobile**, la force spécifique est moyennée : $\bar{\mathbf f}_b$. Au repos, $\mathbf f_b = C_{bn}(0, 0, -g)^T$, d'où :
 
 $$
-\phi_0 = \operatorname{atan2}(-\bar f_y,\, -\bar f_z), \qquad
-\theta_0 = \operatorname{atan2}\!\left(\bar f_x,\, \sqrt{\bar f_y^2 + \bar f_z^2}\right)
+\phi_0 = \mathrm{atan2}(-\bar f_y,\, -\bar f_z), \qquad
+\theta_0 = \mathrm{atan2}\!\left(\bar f_x,\, \sqrt{\bar f_y^2 + \bar f_z^2}\right)
 $$
 
 Le cap initial $\psi_0$ vient du magnétomètre s'il est disponible et activé (spécification 02, §3.3), sinon $\psi_0 = 0$.
@@ -76,7 +76,7 @@ $$
 $$
 
 $$
-q_{nb}^{+} = \operatorname{normalise}\!\Big(q_{nb} \otimes q\{\boldsymbol\omega\,\Delta t\}\Big),
+q_{nb}^{+} = \mathrm{normalise}\!\Big(q_{nb} \otimes q\{\boldsymbol\omega\,\Delta t\}\Big),
 \qquad
 q\{\boldsymbol\theta\} = \Big(\cos\tfrac{\lVert\boldsymbol\theta\rVert}{2},\ \tfrac{\boldsymbol\theta}{\lVert\boldsymbol\theta\rVert}\sin\tfrac{\lVert\boldsymbol\theta\rVert}{2}\Big)
 $$
@@ -118,7 +118,7 @@ I & I\Delta t & 0 & 0 & 0\\
 $$
 
 $$
-Q_d = \operatorname{diag}\big(\,0,\ \sigma_a^2\Delta t\,I,\ \sigma_g^2\Delta t\,I,\ \sigma_{ba}^2\Delta t\,I,\ \sigma_{bg}^2\Delta t\,I\,\big)
+Q_d = \mathrm{diag}\big(\,0,\ \sigma_a^2\Delta t\,I,\ \sigma_g^2\Delta t\,I,\ \sigma_{ba}^2\Delta t\,I,\ \sigma_{bg}^2\Delta t\,I\,\big)
 \qquad (C_{nb}C_{nb}^T = I)
 $$
 
@@ -157,7 +157,7 @@ $$
 $$
 \mathbf p \mathrel{+}= \delta\hat{\mathbf p},\quad
 \mathbf v \mathrel{+}= \delta\hat{\mathbf v},\quad
-q_{nb} \leftarrow \operatorname{normalise}\big(q\{\hat{\boldsymbol\varphi}\} \otimes q_{nb}\big),\quad
+q_{nb} \leftarrow \mathrm{normalise}\big(q\{\hat{\boldsymbol\varphi}\} \otimes q_{nb}\big),\quad
 \mathbf b_a \mathrel{+}= \delta\hat{\mathbf b}_a,\quad
 \mathbf b_g \mathrel{+}= \delta\hat{\mathbf b}_g
 $$
@@ -168,9 +168,9 @@ Le jacobien de remise à zéro est approché par l'identité (erreurs petites).
 
 | Mesure | Origine | $\mathbf y$ | $H$ (blocs non nuls) | $R$ | Rejet |
 |---|---|---|---|---|---|
-| Position | GPS | $\mathbf z - \hat{\mathbf p}$ | $H_p = I_3$ | $\operatorname{diag}(\sigma_H^2,\sigma_H^2,\sigma_V^2)$ | χ²₃ |
-| Cap | MSU | $\operatorname{wrap}(\psi_{mag} - \hat\psi)$ | $H_\varphi$ (§5.4) | $\sigma_\psi^2$ | χ²₁ |
-| Vitesse PDR | Aides piéton | $\mathbf z - \hat{\mathbf v}$ | $H_v = I_3$ | $\operatorname{diag}(\sigma_H^2,\sigma_H^2,\sigma_V^2)$ | χ²₃ |
+| Position | GPS | $\mathbf z - \hat{\mathbf p}$ | $H_p = I_3$ | $\mathrm{diag}(\sigma_H^2,\sigma_H^2,\sigma_V^2)$ | χ²₃ |
+| Cap | MSU | $\mathrm{wrap}(\psi_{mag} - \hat\psi)$ | $H_\varphi$ (§5.4) | $\sigma_\psi^2$ | χ²₁ |
+| Vitesse PDR | Aides piéton | $\mathbf z - \hat{\mathbf v}$ | $H_v = I_3$ | $\mathrm{diag}(\sigma_H^2,\sigma_H^2,\sigma_V^2)$ | χ²₃ |
 | ZUPT | Aides piéton | $-\hat{\mathbf v}$ | $H_v = I_3$ | $0{,}03^2 I$ | non |
 | ZARU | Aides piéton | $\tilde{\boldsymbol\omega} - \hat{\mathbf b}_g$ | $H_{bg} = I_3$ | $0{,}02^2 I$ | non |
 | Carte (1D) | Carte | $d$ (distance au réseau) | $H_p = (n_N, n_E, 0)$ | $1{,}5^2$ | χ²₁ |
@@ -178,7 +178,7 @@ Le jacobien de remise à zéro est approché par l'identité (erreurs petites).
 
 ### 5.4 Jacobien exact du cap
 
-Avec $\psi = \operatorname{atan2}(C_{21}, C_{11})$ et $C^{vrai} = (I + [\boldsymbol\varphi\times])\hat C$ :
+Avec $\psi = \mathrm{atan2}(C_{21}, C_{11})$ et $C^{vrai} = (I + [\boldsymbol\varphi\times])\hat C$ :
 
 $$
 H_\varphi = \frac{1}{C_{11}^2 + C_{21}^2}\begin{pmatrix} -C_{11}C_{31} & -C_{21}C_{31} & C_{11}^2 + C_{21}^2 \end{pmatrix}
